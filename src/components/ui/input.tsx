@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
-// Directly use React.InputHTMLAttributes<HTMLInputElement> without defining an empty interface
+// Directly use React.InputHTMLAttributes<HTMLInputElement> without declaring a separate interface
 const Input = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(
   ({ className, type, ...props }, ref) => {
     return (
