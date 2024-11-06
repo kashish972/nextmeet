@@ -1,7 +1,7 @@
 import { Search, Plus, MoreHorizontal } from "lucide-react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
-
+import Image from "next/image";
 const friendsData = [
   { name: "John Doe", time: "2min", online: true },
   { name: "Sarah Smith", time: "", online: false },
@@ -31,7 +31,7 @@ const RightSidebar = () => {
       <div className="grid grid-cols-3 gap-2 mb-6">
         {/* First Photo with Plus Icon */}
         <div className="relative">
-          <img
+          <image
             src="https://imgs.search.brave.com/HHqp0H51nRmTpTmMoyv1cchnINRZf5MTfu8ggzqY_rM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2IxLzdh/L2U2L2IxN2FlNmFj/M2UyNjhiYWE1OTc4/MmM5MmFiNDhjNDk0/LmpwZw"
             alt="Photo 1"
             className="w-full h-24 object-cover rounded-full"
@@ -42,7 +42,7 @@ const RightSidebar = () => {
         {/* Other Photos with Green Border and Rounded Images */}
         {[2, 3].map((num) => (
           <div key={num} className="border-2 border-green-500 rounded-lg">
-            <img
+            <image
               src={`https://imgs.search.brave.com/yI_NQsUIfbdG2mn4MZMvdO5omxXAQFxetSqG2TqerZk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNy8w/Mi8xNi8yMy8xMC9z/bWlsZS0yMDcyOTA3/XzY0MC5qcGc`}
               alt={`Photo ${num}`}
               className="w-full h-24 object-cover rounded-full"
